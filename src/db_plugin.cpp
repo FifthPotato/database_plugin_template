@@ -68,7 +68,7 @@
 // read a message body off of the socket
 irods::error db_start_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_start_op
 
 // =-=-=-=-=-=-=-
@@ -76,21 +76,21 @@ irods::error db_start_op(
 irods::error db_debug_op(
     irods::plugin_context& _ctx,
     const char*            _mode ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_debug_op
 
 // =-=-=-=-=-=-=-
 // open a database connection
 irods::error db_open_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_open_op
 
 // =-=-=-=-=-=-=-
 // close a database connection
 irods::error db_close_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_close_op
 
 // =-=-=-=-=-=-=-
@@ -100,7 +100,7 @@ irods::error db_check_and_get_object_id_op(
     const char*            _type,
     const char*            _name,
     const char*            _access ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_check_and_get_object_id_op
 
 // =-=-=-=-=-=-=-
@@ -108,7 +108,7 @@ irods::error db_check_and_get_object_id_op(
 irods::error db_get_local_zone_op(
     irods::plugin_context& _ctx,
     std::string*           _zone ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_local_zone_op
 
 // =-=-=-=-=-=-=-
@@ -128,7 +128,7 @@ irods::error db_mod_data_obj_meta_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info,
     keyValPair_t*          _reg_param ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_data_obj_meta_op
 
 
@@ -137,7 +137,7 @@ irods::error db_mod_data_obj_meta_op(
 irods::error db_reg_data_obj_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_data_obj_op
 
 
@@ -148,7 +148,7 @@ irods::error db_reg_replica_op(
     dataObjInfo_t*         _src_data_obj_info,
     dataObjInfo_t*         _dst_data_obj_info,
     keyValPair_t*          _cond_input ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_replica_op
 
 // =-=-=-=-=-=-=-
@@ -157,7 +157,7 @@ irods::error db_unreg_replica_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info,
     keyValPair_t*          _cond_input ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_unreg_replica_op
 
 // =-=-=-=-=-=-=-
@@ -165,7 +165,7 @@ irods::error db_unreg_replica_op(
 irods::error db_reg_rule_exec_op(
     irods::plugin_context& _ctx,
     ruleExecSubmitInp_t*   _re_sub_inp ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_rule_exec_op
 
 // =-=-=-=-=-=-=-
@@ -175,18 +175,18 @@ irods::error db_mod_rule_exec_op(
     const char*            _re_id,
     keyValPair_t*          _reg_param )
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_rule_exec_op
 
 irods::error db_del_rule_exec_op(irods::plugin_context& _ctx, const char* _re_id)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_rule_exec_op
 
 irods::error db_add_child_resc_op(
     irods::plugin_context& _ctx,
     std::map<std::string, std::string> *_resc_input ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_add_child_resc_op
 
 // =-=-=-=-=-=-=-
@@ -194,7 +194,7 @@ irods::error db_add_child_resc_op(
 irods::error db_reg_resc_op(
     irods::plugin_context& _ctx,
     std::map<std::string, std::string> *_resc_input ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_resc_op
 
 // =-=-=-=-=-=-=-
@@ -202,7 +202,7 @@ irods::error db_reg_resc_op(
 irods::error db_del_child_resc_op(
     irods::plugin_context& _ctx,
     std::map<std::string, std::string> *_resc_input ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_child_resc_op
 
 // =-=-=-=-=-=-=-
@@ -211,21 +211,21 @@ irods::error db_del_resc_op(
     irods::plugin_context& _ctx,
     const char *_resc_name,
     int                    _dry_run ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_resc_op
 
 // =-=-=-=-=-=-=-
 // rollback the db
 irods::error db_rollback_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_rollback_op
 
 // =-=-=-=-=-=-=-
 // commit the transaction
 irods::error db_commit_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_commit_op
 
 // =-=-=-=-=-=-=-
@@ -233,7 +233,7 @@ irods::error db_commit_op(
 irods::error db_del_user_re_op(
     irods::plugin_context& _ctx,
     userInfo_t*            _user_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_user_re_op
 
 // =-=-=-=-=-=-=-
@@ -241,7 +241,7 @@ irods::error db_del_user_re_op(
 irods::error db_reg_coll_by_admin_op(
     irods::plugin_context& _ctx,
     collInfo_t*            _coll_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_coll_by_admin_op
 
 // =-=-=-=-=-=-=-
@@ -249,7 +249,7 @@ irods::error db_reg_coll_by_admin_op(
 irods::error db_reg_coll_op(
     irods::plugin_context& _ctx,
     collInfo_t*            _coll_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_coll_op
 
 // =-=-=-=-=-=-=-
@@ -257,7 +257,7 @@ irods::error db_reg_coll_op(
 irods::error db_mod_coll_op(
     irods::plugin_context& _ctx,
     collInfo_t*            _coll_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_coll_op
 
 // =-=-=-=-=-=-=-
@@ -268,7 +268,7 @@ irods::error db_reg_zone_op(
     const char*            _zone_type,
     const char*            _zone_conn_info,
     const char*            _zone_comment ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_zone_op
 
 // =-=-=-=-=-=-=-
@@ -278,7 +278,7 @@ irods::error db_mod_zone_op(
     const char*            _zone_name,
     const char*            _option,
     const char*            _option_value ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_zone_op
 
 // =-=-=-=-=-=-=-
@@ -287,7 +287,7 @@ irods::error db_rename_coll_op(
     irods::plugin_context& _ctx,
     const char*            _old_coll,
     const char*            _new_coll ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_rename_coll_op
 
 // =-=-=-=-=-=-=-
@@ -297,7 +297,7 @@ irods::error db_mod_zone_coll_acl_op(
     const char*            _access_level,
     const char*            _user_name,
     const char*            _path_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_zone_coll_acl_op
 
 // =-=-=-=-=-=-=-
@@ -306,7 +306,7 @@ irods::error db_rename_local_zone_op(
     irods::plugin_context& _ctx,
     const char*            _old_zone,
     const char*            _new_zone ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_rename_local_zone_op
 
 // =-=-=-=-=-=-=-
@@ -314,7 +314,7 @@ irods::error db_rename_local_zone_op(
 irods::error db_del_zone_op(
     irods::plugin_context& _ctx,
     const char*            _zone_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_zone_op
 
 irods::error db_simple_query_op(
@@ -328,7 +328,7 @@ irods::error db_simple_query_op(
     int*                   _control,
     char*                  _out_buf,
     int                    _max_out_buf ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_simple_query_op
 
 // =-=-=-=-=-=-=-
@@ -336,7 +336,7 @@ irods::error db_simple_query_op(
 irods::error db_del_coll_by_admin_op(
     irods::plugin_context& _ctx,
     collInfo_t*            _coll_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_coll_by_admin_op
 
 // =-=-=-=-=-=-=-
@@ -344,7 +344,7 @@ irods::error db_del_coll_by_admin_op(
 irods::error db_del_coll_op(
     irods::plugin_context& _ctx,
     collInfo_t*            _coll_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_coll_op
 
 // =-=-=-=-=-=-=-
@@ -357,7 +357,7 @@ irods::error db_check_auth_op(
     const char*            _user_name,
     int*                   _user_priv_level,
     int*                   _client_priv_level ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_check_auth_op
 
 // =-=-=-=-=-=-=-
@@ -366,7 +366,7 @@ irods::error db_make_temp_pw_op(
     irods::plugin_context& _ctx,
     char*                  _pw_value_to_hash,
     const char*            _other_user ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_make_temp_pw_op
 
 // =-=-=-=-=-=-=-
@@ -375,7 +375,7 @@ irods::error db_make_limited_pw_op(
     irods::plugin_context& _ctx,
     int                    _ttl,
     char*                  _pw_value_to_hash ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_make_limited_pw_op
 
 // =-=-=-=-=-=-=-
@@ -387,7 +387,7 @@ auto db_update_pam_password_op(irods::plugin_context& _ctx,
                                char** _password_buffer,
                                std::size_t _password_buffer_size) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_update_pam_password_op
 
 // =-=-=-=-=-=-=-
@@ -397,7 +397,7 @@ irods::error db_mod_user_op(
     const char*            _user_name,
     const char*            _option,
     const char*            _new_value ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_user_op
 
 // =-=-=-=-=-=-=-
@@ -408,7 +408,7 @@ irods::error db_mod_group_op(
     const char*            _option,
     const char*            _user_name,
     const char*            _user_zone ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_group_op
 
 // =-=-=-=-=-=-=-
@@ -418,7 +418,7 @@ irods::error db_mod_resc_op(
     const char*            _resc_name,
     const char*            _option,
     const char*            _option_value ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_resc_op
 
 // =-=-=-=-=-=-=-
@@ -429,7 +429,7 @@ irods::error db_mod_resc_data_paths_op(
     const char*            _old_path,
     const char*            _new_path,
     const char*            _user_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_resc_data_paths_op
 
 // =-=-=-=-=-=-=-
@@ -438,7 +438,7 @@ irods::error db_mod_resc_freespace_op(
     irods::plugin_context& _ctx,
     const char*            _resc_name,
     int                    _update_value ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_resc_freespace_op
 
 // =-=-=-=-=-=-=-
@@ -446,7 +446,7 @@ irods::error db_mod_resc_freespace_op(
 irods::error db_reg_user_re_op(
     irods::plugin_context& _ctx,
     userInfo_t*            _user_info ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_user_re_op
 
 // =-=-=-=-=-=-=-
@@ -460,7 +460,7 @@ irods::error db_set_avu_metadata_op(
     const char*            _new_unit,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_set_avu_metadata_op
 
 #define ACCESS_MAX 999999  /* A large access value (larger than the
@@ -482,7 +482,7 @@ irods::error db_add_avu_metadata_wild_op(
     const char*            _units,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_add_avu_metadata_wild_op
 
 irods::error db_add_avu_metadata_op(
@@ -494,7 +494,7 @@ irods::error db_add_avu_metadata_op(
     const char*            _units,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_add_avu_metadata_op
 
 irods::error db_mod_avu_metadata_op(
@@ -509,7 +509,7 @@ irods::error db_mod_avu_metadata_op(
     const char*            _arg3,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_avu_metadata_op
 
 irods::error db_del_avu_metadata_op(
@@ -523,7 +523,7 @@ irods::error db_del_avu_metadata_op(
     int                    _nocommit,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_avu_metadata_op
 
 irods::error db_copy_avu_metadata_op(
@@ -534,7 +534,7 @@ irods::error db_copy_avu_metadata_op(
     const char*            _name2,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_copy_avu_metadata_op
 
 irods::error db_mod_access_control_resc_op(
@@ -544,7 +544,7 @@ irods::error db_mod_access_control_resc_op(
     const char*                  _user_name,
     const char*                  _zone,
     const char*                  _resc_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_access_control_resc_op
 
 irods::error db_mod_access_control_op(
@@ -554,21 +554,21 @@ irods::error db_mod_access_control_op(
     const char*                  _user_name,
     const char*                  _zone,
     const char*                  _path_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_access_control_op
 
 irods::error db_rename_object_op(
     irods::plugin_context& _ctx,
     rodsLong_t             _obj_id,
     const char*            _new_name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_rename_object_op
 
 irods::error db_move_object_op(
     irods::plugin_context& _ctx,
     rodsLong_t             _obj_id,
     rodsLong_t             _target_coll_id ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_move_object_op
 
 irods::error db_reg_token_op(
@@ -579,14 +579,14 @@ irods::error db_reg_token_op(
     const char*            _value2,
     const char*            _value3,
     const char*            _comment ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_token_op
 
 irods::error db_del_token_op(
     irods::plugin_context& _ctx,
     const char*            _name_space,
     const char*            _name ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_token_op
 
 irods::error db_reg_server_load_op(
@@ -600,26 +600,26 @@ irods::error db_reg_server_load_op(
     const char*            _disk_space,
     const char*            _net_input,
     const char*            _net_output ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_server_load_op
 
 irods::error db_purge_server_load_op(
     irods::plugin_context& _ctx,
     const char*            _seconds_ago ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_purge_server_load_op
 
 irods::error db_reg_server_load_digest_op(
     irods::plugin_context& _ctx,
     const char*            _resc_name,
     const char*            _load_factor ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_reg_server_load_digest_op
 
 irods::error db_purge_server_load_digest_op(
     irods::plugin_context& _ctx,
     const char*            _seconds_ago ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_purge_server_load_digest_op
 
 irods::error db_get_grid_configuration_value_op(
@@ -629,7 +629,7 @@ irods::error db_get_grid_configuration_value_op(
     char*                  _option_value,
     std::size_t            _option_value_buffer_size)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_grid_configuration_value_op
 
 irods::error db_set_grid_configuration_value_op(
@@ -638,12 +638,12 @@ irods::error db_set_grid_configuration_value_op(
     const char*            _option_name,
     const char*            _option_value)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_set_grid_configuration_value_op
 
 irods::error db_calc_usage_and_quota_op(
     irods::plugin_context& _ctx ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_calc_usage_and_quota_op
 
 irods::error db_set_quota_op(
@@ -652,7 +652,7 @@ irods::error db_set_quota_op(
     const char*            _name,
     const char*            _resc_name,
     const char*            _limit ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_set_quota_op
 
 irods::error db_check_quota_op(
@@ -661,12 +661,12 @@ irods::error db_check_quota_op(
     const char*            _resc_name,
     rodsLong_t*            _user_quota,
     int*                   _quota_status ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_check_quota_op
 
 irods::error db_del_unused_avus_op(irods::plugin_context& _ctx)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_unused_avus_op
 
 irods::error db_ins_rule_table_op(
@@ -680,7 +680,7 @@ irods::error db_ins_rule_table_op(
     const char*            _rule_recovery,
     const char*            _rule_id_str,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_ins_rule_table_op
 
 irods::error db_ins_dvm_table_op(
@@ -690,7 +690,7 @@ irods::error db_ins_dvm_table_op(
     const char*            _action,
     const char*            _var_2_cmap,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_ins_dvm_table_op
 
 irods::error db_ins_fnm_table_op(
@@ -699,7 +699,7 @@ irods::error db_ins_fnm_table_op(
     const char*            _func_name,
     const char*            _func_2_cmap,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_ins_fnm_table_op
 
 irods::error db_ins_msrvc_table_op(
@@ -714,41 +714,41 @@ irods::error db_ins_msrvc_table_op(
     const char*            _msrvc_type_name,
     const char*            _msrvc_status,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_ins_msrvc_table_op
 
 irods::error db_version_rule_base_op(
     irods::plugin_context& _ctx,
     const char*            _base_name,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_version_rule_base_op
 
 irods::error db_version_dvm_base_op(
     irods::plugin_context& _ctx,
     const char*            _base_name,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_version_dvm_base_op
 
 irods::error db_version_fnm_base_op(
     irods::plugin_context& _ctx,
     const char*            _base_name,
     const char*            _my_time ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_version_fnm_base_op
 
 irods::error db_add_specific_query_op(
     irods::plugin_context& _ctx,
     const char*            _sql,
     const char*            _alias ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_add_specific_query_op
 
 irods::error db_del_specific_query_op(
     irods::plugin_context& _ctx,
     const char*            _sql_or_alias ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_del_specific_query_op
 
 #define MINIMUM_COL_SIZE 50
@@ -756,14 +756,14 @@ irods::error db_specific_query_op(
     irods::plugin_context& _ctx,
     specificQueryInp_t*    _spec_query_inp,
     genQueryOut_t*         _result ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_specific_query_op
 
 irods::error db_get_distinct_data_obj_count_on_resource_op(
     irods::plugin_context& _ctx,
     const char*            _resc_name,
     long long*             _count ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_distinct_data_obj_count_on_resource_op
 
 irods::error db_get_distinct_data_objs_missing_from_child_given_parent_op(
@@ -772,7 +772,7 @@ irods::error db_get_distinct_data_objs_missing_from_child_given_parent_op(
     const std::string*     _child,
     int                    _limit,
     dist_child_result_t*   _results ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_distinct_data_objs_missing_from_child_given_parent_op
 
 irods::error db_get_repl_list_for_leaf_bundles_op(
@@ -782,7 +782,7 @@ irods::error db_get_repl_list_for_leaf_bundles_op(
     const std::vector<leaf_bundle_t>* _bundles,
     const std::string*          _invocation_timestamp,
     dist_child_result_t*        _results ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_repl_list_for_leaf_bundles_op
 
 irods::error db_get_hierarchy_for_resc_op(
@@ -790,7 +790,7 @@ irods::error db_get_hierarchy_for_resc_op(
     const std::string*     _resc_name,
     const std::string*     _zone_name,
     std::string*           _hierarchy ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_hierarchy_for_resc_op
 
 // NOLINTNEXTLINE(readability-function-cognitive-complexity)
@@ -803,13 +803,13 @@ irods::error db_mod_ticket_op(
     const char*            _arg5,
     const KeyValPair*      _cond_input)
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_mod_ticket_op
 
 irods::error db_get_icss_op(
     irods::plugin_context& _ctx,
     icatSessionStruct**    _icss ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_icss_op
 
 // =-=-=-=-=-=-=-
@@ -820,7 +820,7 @@ irods::error db_gen_query_op(
     irods::plugin_context& _ctx,
     genQueryInp_t*         _gen_query_inp,
     genQueryOut_t*         _result ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_gen_query_op
 
 // =-=-=-=-=-=-=-
@@ -834,7 +834,7 @@ irods::error db_gen_query_access_control_setup_op(
     const char*            _host,
     int                    _priv,
     int                    _control_flag ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_gen_query_access_control_setup_op
 
 // =-=-=-=-=-=-=-
@@ -845,7 +845,7 @@ irods::error db_gen_query_ticket_setup_op(
     irods::plugin_context& _ctx,
     const char*            _ticket,
     const char*            _client_addr ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_gen_query_ticket_setup_op
 
 // =-=-=-=-=-=-=-
@@ -860,14 +860,14 @@ int chl_general_update_impl( generalUpdateInp_t );
 irods::error db_general_update_op(
     irods::plugin_context& _ctx,
     generalUpdateInp_t*    _update_inp ) {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_general_update_op
 
 auto db_check_permission_to_modify_data_object_op(
     irods::plugin_context& _ctx,
     const rodsLong_t       _data_id) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_check_permission_to_modify_data_object_op
 
 auto db_update_ticket_write_byte_count_op(
@@ -875,18 +875,18 @@ auto db_update_ticket_write_byte_count_op(
     const rodsLong_t       _data_id,
     const rodsLong_t       _bytes_written) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_update_ticket_write_byte_count_op
 
 auto db_get_delay_rule_info_op(irods::plugin_context& _ctx, const char* _rule_id, std::vector<std::string>* _info)
     -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_get_delay_rule_info_op
 
 auto db_data_object_finalize_op(irods::plugin_context& _ctx, const char* _json_input) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_data_object_finalize_op
 
 auto db_check_auth_credentials_op(irods::plugin_context& _ctx,
@@ -895,7 +895,7 @@ auto db_check_auth_credentials_op(irods::plugin_context& _ctx,
                                   const char* _password,
                                   int* _correct) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_check_auth_credentials_op
 
 auto db_execute_genquery2_sql(irods::plugin_context& _ctx,
@@ -903,7 +903,7 @@ auto db_execute_genquery2_sql(irods::plugin_context& _ctx,
                               const std::vector<std::string>* _values,
                               char** _output) -> irods::error
 {
-    return SUCCESS(); //stub
+    return SUCCESS(); //TODO - stub
 } // db_execute_genquery2_sql
 
 // =-=-=-=-=-=-=-
