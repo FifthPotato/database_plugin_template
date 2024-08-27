@@ -69,16 +69,6 @@ string(TOUPPER ${IRODS_PACKAGE_COMPONENT_MYSQL_NAME} IRODS_PACKAGE_COMPONENT_MYS
 string(TOUPPER ${IRODS_PACKAGE_COMPONENT_ORACLE_NAME} IRODS_PACKAGE_COMPONENT_ORACLE_NAME_UPPERCASE)
 include(IrodsCPackCommon)
 
-configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/icatSysTables.sql.pp.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/src/icatSysTables.sql.pp"
-  @ONLY
-)
-configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/mysql_functions.sql.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/src/mysql_functions.sql"
-  @ONLY
-)
 
 foreach(plugin IN LISTS IRODS_DATABASE_PLUGINS)
   string(TOUPPER ${plugin} PLUGIN_UPPERCASE)
@@ -89,13 +79,6 @@ foreach(plugin IN LISTS IRODS_DATABASE_PLUGINS)
     ${plugin_target}
     MODULE
     "${CMAKE_CURRENT_SOURCE_DIR}/src/db_plugin.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/general_query.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/general_query_setup.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/general_update.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/irods_catalog_properties.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/irods_sql_logger.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/low_level_odbc.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/mid_level_routines.cpp"
   )
   set_property(TARGET ${plugin_target} PROPERTY LIBRARY_OUTPUT_NAME ${plugin_name})
   target_link_libraries(
@@ -110,14 +93,12 @@ foreach(plugin IN LISTS IRODS_DATABASE_PLUGINS)
     "${IRODS_EXTERNALS_FULLPATH_NANODBC}/lib/libnanodbc.so"
     fmt::fmt
     nlohmann_json::nlohmann_json
-    ${ODBC_LIBRARY}
   )
   target_include_directories(
     ${plugin_target}
     PRIVATE
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "${IRODS_EXTERNALS_FULLPATH_BOOST}/include"
-    "${IRODS_EXTERNALS_FULLPATH_NANODBC}/include"
   )
   target_compile_definitions(
     ${plugin_target}
@@ -128,13 +109,6 @@ foreach(plugin IN LISTS IRODS_DATABASE_PLUGINS)
   )
 
   # TODO(#6213): don't run `cpp` like this
-  add_custom_command(
-    OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/icatSysTables_${plugin}.sql"
-    COMMAND cpp -E -P -D${plugin} "${CMAKE_CURRENT_BINARY_DIR}/src/icatSysTables.sql.pp" "${CMAKE_CURRENT_BINARY_DIR}/icatSysTables_${plugin}.sql"
-    MAIN_DEPENDENCY "${CMAKE_CURRENT_BINARY_DIR}/src/icatSysTables.sql.pp"
-  )
-  add_custom_target(IRODS_PHONY_TARGET_icatSysTables_${plugin}.sql ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/icatSysTables_${plugin}.sql")
-  add_dependencies(${plugin_target} IRODS_PHONY_TARGET_icatSysTables_${plugin}.sql)
 
   install(
     TARGETS

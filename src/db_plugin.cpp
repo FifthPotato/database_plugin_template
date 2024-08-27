@@ -1,6 +1,4 @@
 #include "irods/authenticate.h"
-#include "irods/catalog.hpp"
-#include "irods/catalog_utilities.hpp"
 #include "irods/checksum.h"
 #include "irods/icatHighLevelRoutines.hpp"
 #include "irods/icatStructs.hpp"
@@ -27,10 +25,6 @@
 #include "irods/miscServerFunct.hpp"
 #include "irods/modAccessControl.h"
 #include "irods/msParam.h"
-#include "irods/private/irods_catalog_properties.hpp"
-#include "irods/private/irods_sql_logger.hpp"
-#include "irods/private/low_level.hpp"
-#include "irods/private/mid_level.hpp"
 #include "irods/rcConnect.h"
 #include "irods/rcMisc.h"
 #include "irods/rods.h"
@@ -41,7 +35,6 @@
 
 #include <fmt/chrono.h>
 #include <fmt/format.h>
-#include <nanodbc/nanodbc.h>
 #include <nlohmann/json.hpp>
 
 #include <boost/date_time.hpp>
@@ -923,16 +916,7 @@ class postgres_database_plugin : public irods::database {
         postgres_database_plugin(const std::string& _nm, const std::string& _ctx)
             : irods::database(_nm, _ctx)
         {
-            // =-=-=-=-=-=-=-
-            // create a property for the icat session
-            // which will manage the lifetime of the db
-            // connection - use a copy ctor to init
-            icatSessionStruct icss;
-            std::memset(&icss, 0, sizeof(icss));
-            properties_.set< icatSessionStruct >( ICSS_PROP, icss );
-
-            set_start_operation( db_start_operation );
-        } // ctor
+        } // TODO: stub, maybe rename class?
 
         ~postgres_database_plugin()
         {
