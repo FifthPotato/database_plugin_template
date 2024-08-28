@@ -79,7 +79,10 @@ irods::error db_debug_op(
 
 // =-=-=-=-=-=-=-
 // open a database connection
-// Begins a database connection. 
+// Begins a database connection.
+// Should put the plugin's icatSessionStruct member (see irods/icatStructs.hpp) in a state that is ready to accept queries.
+// Specifically, should populate icss members environPtr and connectPtr.
+// This should also include any necessary authentication steps.
 irods::error db_open_op(
     irods::plugin_context& _ctx ) {
     return SUCCESS(); //TODO - stub
@@ -87,6 +90,10 @@ irods::error db_open_op(
 
 // =-=-=-=-=-=-=-
 // close a database connection
+// Closes a database connection.
+// Should put the plugin's icatSessionStruct member (see irods/icatStructs.hpp) in a cleaned-up state that cannot accept queries.
+// Should additionally free any memory allocated for icss members environPtr and connectPtr, and set them to NULL.
+// This may also include handling for pending queries, etc. 
 irods::error db_close_op(
     irods::plugin_context& _ctx ) {
     return SUCCESS(); //TODO - stub
