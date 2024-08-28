@@ -57,8 +57,12 @@
 #include <utility>
 #include <vector>
 
+const std::string ICSS_PROP( "irods_icss_property" );
+
 // =-=-=-=-=-=-=-
-// read a message body off of the socket
+// Appears to be completely unused?
+// TODO: ask about this
+// All references point to db_start_operation, defined below, which was stubbed out to begin with
 irods::error db_start_op(
     irods::plugin_context& _ctx ) {
     return SUCCESS(); //TODO - stub
@@ -66,6 +70,7 @@ irods::error db_start_op(
 
 // =-=-=-=-=-=-=-
 // set debug behavior for plugin
+// Read value of _mode and set plugin behavior accordingly
 irods::error db_debug_op(
     irods::plugin_context& _ctx,
     const char*            _mode ) {
@@ -74,6 +79,7 @@ irods::error db_debug_op(
 
 // =-=-=-=-=-=-=-
 // open a database connection
+// Begins a database connection. 
 irods::error db_open_op(
     irods::plugin_context& _ctx ) {
     return SUCCESS(); //TODO - stub
@@ -916,6 +922,15 @@ class postgres_database_plugin : public irods::database {
         postgres_database_plugin(const std::string& _nm, const std::string& _ctx)
             : irods::database(_nm, _ctx)
         {
+
+            // create a property for the icat session
+            // which will manage the lifetime of the db
+            // connection - use a copy ctor to init
+            icatSessionStruct icss;
+            std::memset(&icss, 0, sizeof(icss));
+            properties_.set< icatSessionStruct >( ICSS_PROP, icss );
+
+            set_start_operation( db_start_operation );
         } // TODO: stub, maybe rename class?
 
         ~postgres_database_plugin()
