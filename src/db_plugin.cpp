@@ -111,6 +111,8 @@ irods::error db_check_and_get_object_id_op(
 
 // =-=-=-=-=-=-=-
 // return the local zone
+// Returns the local (default) zone name, queried from the database.
+// The return value should be stored in *_zone.
 irods::error db_get_local_zone_op(
     irods::plugin_context& _ctx,
     std::string*           _zone ) {
@@ -119,6 +121,9 @@ irods::error db_get_local_zone_op(
 
 // =-=-=-=-=-=-=-
 // update the data obj count of a resource
+// Updates the data object count of a resource.
+// For a named resource _resc, modify its data object count by _delta.
+// (also appears unused?)
 irods::error db_update_resc_obj_count_op(
     irods::plugin_context& _ctx,
     const std::string*     _resc,
@@ -129,7 +134,36 @@ irods::error db_update_resc_obj_count_op(
 } // db_update_resc_obj_count_op
 
 // =-=-=-=-=-=-=-
-// update the data obj count of a resource
+// Modify the metadata (NOT KVPs) of the data object described by _data_obj_info.
+// The attribute-value map is described by _reg_param, and corresponding database entries
+// should be updated to match the values inputted.
+// Permission handling, as well as the optional support of ADMIN_KW, should be done here as well.
+// Additionally, may optionally support "special" attributes such as ADMIN_KW.
+// A list of possible input attributes follows.
+
+/*
+        COLL_ID_KW,
+        DATA_CREATE_KW,
+        CHKSUM_KW,
+        DATA_EXPIRY_KW,
+        REPL_STATUS_KW,
+        DATA_MODE_KW,
+        DATA_NAME_KW,
+        DATA_OWNER_KW,
+        DATA_OWNER_ZONE_KW,
+        FILE_PATH_KW,
+        REPL_NUM_KW,
+        DATA_SIZE_KW,
+        STATUS_STRING_KW,
+        DATA_TYPE_KW,
+        VERSION_KW,
+        DATA_MODIFY_KW,
+        DATA_COMMENTS_KW,
+        RESC_HIER_STR_KW,
+        RESC_ID_KW,
+        RESC_NAME_KW
+*/
+// See irods/rodsKeyWdDef.h for more details on their expected interpretation.
 irods::error db_mod_data_obj_meta_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info,
