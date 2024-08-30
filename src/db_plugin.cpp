@@ -184,7 +184,11 @@ irods::error db_reg_data_obj_op(
 
 
 // =-=-=-=-=-=-=-
-// register a data object into the catalog
+// Registers a new replica into the catalog.
+// The replica source is given by _src_data_obj_info and the destination by _dst_data_obj_info.
+// Optional parameters may be passed via _cond_input.
+// _src_data_obj_info should describe an already existing data object in the catalog.
+// Use db_reg_data_obj_op to register a new data object.
 irods::error db_reg_replica_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _src_data_obj_info,
@@ -194,7 +198,9 @@ irods::error db_reg_replica_op(
 } // db_reg_replica_op
 
 // =-=-=-=-=-=-=-
-// unregister a data object
+// Deletes a replica. A data object with its last replica deleted should be effectively unregistered.
+// The replica to be unregistered is given in _data_obj_info.
+// Optional parameters are passed through _cond_input.
 irods::error db_unreg_replica_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info,
