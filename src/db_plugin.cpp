@@ -173,7 +173,9 @@ irods::error db_mod_data_obj_meta_op(
 
 
 // =-=-=-=-=-=-=-
-// update the data obj count of a resource
+// Registers a new data object into the catalog.
+// Registers a new data object, whose information is given in _data_obj_info.
+// See irods/objInfo.h for more details on valid input attributes.
 irods::error db_reg_data_obj_op(
     irods::plugin_context& _ctx,
     dataObjInfo_t*         _data_obj_info ) {
