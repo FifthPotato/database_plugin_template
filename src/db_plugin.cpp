@@ -123,7 +123,7 @@ irods::error db_get_local_zone_op(
 // update the data obj count of a resource
 // Updates the data object count of a resource.
 // For a named resource _resc, modify its data object count by _delta.
-// (also appears unused?)
+// (also appears unused?) (T says actually unused :))
 irods::error db_update_resc_obj_count_op(
     irods::plugin_context& _ctx,
     const std::string*     _resc,
@@ -134,10 +134,10 @@ irods::error db_update_resc_obj_count_op(
 } // db_update_resc_obj_count_op
 
 // =-=-=-=-=-=-=-
-// Modify the metadata (NOT KVPs) of the data object described by _data_obj_info.
+// Modify the metadata (NOT AVUs) of the data object described by _data_obj_info.
 // The attribute-value map is described by _reg_param, and corresponding database entries
 // should be updated to match the values inputted.
-// Permission handling, as well as the optional support of ADMIN_KW, should be done here as well.
+// Permission handling, as well as the optional support of ADMIN_KW, should be done here as well. (Alan says the do not auth)
 // Additionally, may optionally support "special" attributes such as ADMIN_KW.
 // A list of possible input attributes follows.
 
@@ -209,7 +209,10 @@ irods::error db_unreg_replica_op(
 } // db_unreg_replica_op
 
 // =-=-=-=-=-=-=-
-//
+// Register a new delay rule to be run.
+// This is specifically for delay rules-- non-delay rules are registered elsewhere.
+// Rule information is passed in via _re_sub_inp.
+// See irods/ruleExecSubmit.h for struct details.
 irods::error db_reg_rule_exec_op(
     irods::plugin_context& _ctx,
     ruleExecSubmitInp_t*   _re_sub_inp ) {
@@ -217,7 +220,29 @@ irods::error db_reg_rule_exec_op(
 } // db_reg_rule_exec_op
 
 // =-=-=-=-=-=-=-
-// Modify an existing rule in the catalog.
+// Modify an existing delay rule.
+// This is specifically for delay rules-- non-delay rules are modified elsewhere.
+// _re_id specifies the passed in rule id, and should uniquely identify the delay rule.
+// _reg_param specifies the parameters to be modified.
+// A list of valid input attributes follows.
+
+/*
+    RULE_NAME_KW,
+    RULE_REI_FILE_PATH_KW,
+    RULE_USER_NAME_KW,
+    RULE_EXE_ADDRESS_KW,
+    RULE_EXE_TIME_KW,
+    RULE_EXE_FREQUENCY_KW,
+    RULE_PRIORITY_KW,
+    RULE_ESTIMATE_EXE_TIME_KW,
+    RULE_NOTIFICATION_ADDR_KW,
+    RULE_LAST_EXE_TIME_KW,
+    RULE_EXE_STATUS_KW,
+    RULE_EXECUTION_CONTEXT_KW,
+    "END"
+*/
+// NB: "END" represents the literal string "END"
+// See irods/rodsKeyWdDef.h for more details on their expected interpretation.
 irods::error db_mod_rule_exec_op(
     irods::plugin_context& _ctx,
     const char*            _re_id,
@@ -226,6 +251,8 @@ irods::error db_mod_rule_exec_op(
     return SUCCESS(); //TODO - stub
 } // db_mod_rule_exec_op
 
+// Deletes a delay rule.
+// _re_id represents the delay rule to be deleted.
 irods::error db_del_rule_exec_op(irods::plugin_context& _ctx, const char* _re_id)
 {
     return SUCCESS(); //TODO - stub
